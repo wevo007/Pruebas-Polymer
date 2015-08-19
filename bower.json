@@ -1,0 +1,21 @@
+{
+  "name": "polymer-starter-kit",
+  "private": true,
+  "dependencies": {
+    "iron-elements": "PolymerElements/iron-elements#1.0.0",
+    "paper-elements": "PolymerElements/paper-elements#1.0.1",
+    "platinum-elements": "PolymerElements/platinum-elements#1.0.1",
+    "neon-elements": "PolymerElements/neon-elements#1.0.0",
+    "page": "visionmedia/page.js#~1.6.3",
+    "paper-fab-menu": "~0.4.0",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.5",
+    "d-calendar": "subpopular/d-calendar#master",
+    "google-calendar": "GoogleWebComponents/google-calendar#~1.0.1",
+    "mat-elements": "ExpandJS/mat-elements#~0.9.5",
+    "granum-login-panel": "~0.0.3"
+  },
+  "devDependencies": {
+    "web-component-tester": "*",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+  }
+}

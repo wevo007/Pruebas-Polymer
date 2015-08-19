@@ -1,0 +1,86 @@
+<!--
+@license
+Copyright (c) 2015 The ExpandJS authors. All rights reserved.
+This code may only be used under the BSD style license found at https://expandjs.github.io/LICENSE.txt
+The complete set of authors may be found at https://expandjs.github.io/AUTHORS.txt
+The complete set of contributors may be found at https://expandjs.github.io/CONTRIBUTORS.txt
+-->
+
+<!--
+This element is used to overwrite the default material design settings, for example `theme`.
+
+@element mat-settings
+@description A custom element used to overwrite the default material design settings, for example `theme`.
+@keywords material design, material app, web app, html5, expandjs, web-components
+@group functionality
+@homepage http://expandjs.com/elements/mat-settings
+@repository https://github.com/ExpandJS/mat-settings
+
+@behavior xp-shared-behavior /bower_components/xp-shared-behavior/xp-shared-behavior.html
+
+@dependency polymer Polymer/polymer#^1.0.0
+@dependency expandjs ExpandJS/expandjs#0.9.5
+@dependency xp-shared-behavior ExpandJS/xp-shared-behavior#0.9.5
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../expandjs/expandjs.html">
+<link rel="import" href="../xp-shared-behavior/xp-shared-behavior.html">
+
+<script>
+    Polymer({
+
+        // ELEMENT
+        is: 'mat-settings',
+
+        // BEHAVIORS
+        behaviors: [
+            Polymer.XPSharedBehavior
+        ],
+
+        /*********************************************************************/
+
+        // LISTENERS
+        listeners: {
+            'shared-changed': '_handleShared'
+        },
+
+        // PROPERTIES
+        properties: {
+
+            /**
+             * The default value for paper's theme.
+             *
+             * @attribute theme
+             * @type "dark" | "light"
+             * @default "light"
+             * @notifies
+             */
+            theme: {
+                notify: true,
+                observer: '_themeChanged',
+                type: String,
+                value: 'light'
+            }
+        },
+
+        /*********************************************************************/
+
+        // OBSERVER
+        _themeChanged: function (post) {
+            this.set('shared.theme', post);
+        },
+
+        /*********************************************************************/
+
+        // HANDLER
+        _handleShared: function () {
+
+            // Vars
+            var self = this;
+
+            // Setting
+            self.theme = (self.shared && self.shared.theme) || self.theme;
+        }
+    });
+</script>

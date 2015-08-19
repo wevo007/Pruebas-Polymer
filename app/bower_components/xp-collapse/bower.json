@@ -1,0 +1,28 @@
+{
+  "name": "xp-collapse",
+  "license": "BSD-3-Clause",
+  "version": "0.9.5",
+  "description": "A custom element used to create a collapsible element",
+  "homepage": "http://expandjs.com/elements/xp-collapse",
+  "authors": [
+    "Giuliano Rullo <g.rullo@expandjs.com>",
+    "Maurizio Stefàno <m.stefano@expandjs.com>",
+    "Robert Manolea <r.manolea@expandjs.com>"
+  ],
+  "keywords": [
+    "web app",
+    "html5",
+    "expandjs",
+    "web-components"
+  ],
+  "main": [
+    "xp-collapse.html"
+  ],
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "expandjs": "ExpandJS/expandjs#0.9.5",
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
